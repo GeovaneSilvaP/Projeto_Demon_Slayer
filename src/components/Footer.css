@@ -1,0 +1,27 @@
+.footer {
+  background: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-content p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #cccccc;
+}

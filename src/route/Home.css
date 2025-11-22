@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-section h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  z-index: 10;
+  color: white;
+  font-size: 8rem;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.bemvindo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 5%;
+  background-color: #222;
+  color: #fff;
+}
+
+.bemvindo .texto {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 40px;
+}
+
+.bemvindo h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff4500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bemvindo p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.bemvindo img {
+  flex: 1;
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.bemvindo button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bemvindo button:hover {
+  background-color: #ff4500;
+}
+
+/* ==================================== */
+/* SEÇÃO INFOR1 (Cards de Personagens) */
+/* ==================================== */
+
+.infor1 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  padding: 80px 5%;
+
+  background-color: #1a1a1a;
+}
+
+.infor1 .card {
+  flex: 0 1 calc(30% - 30px);
+  max-width: 350px;
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.infor1 .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(230, 0, 0, 0.4);
+  border-color: #e50914;
+}
+
+.infor1 .card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  transition: transform 0.3s;
+}
+
+.infor1 .card:hover img {
+  transform: scale(1.03);
+}
+
+.infor1 .card h4 {
+  font-size: 1.8em;
+  margin-bottom: 12px;
+  color: #ff4500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.infor1 .card p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.infor1 .card button {
+  background-color: #e50914;
+  color: #fff;
+  border: 2px solid #e50914;
+  padding: 12px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.infor1 .card button:hover {
+  background-color: transparent;
+  color: #e50914;
+}
+
+/* ==================================== */
+/* Responsividade Aprimorada */
+/* ==================================== */
+
+@media (max-width: 768px) {
+  .bemvindo {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .bemvindo .texto {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .bemvindo img {
+    max-width: 90%;
+  }
+
+  .bemvindo h3 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1100px) {
+  .infor1 {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .infor1 .card {
+    flex: 0 1 calc(50% - 40px);
+    margin-bottom: 30px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .infor1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+  }
+
+  .infor1 .card {
+    width: 100%;
+    flex: auto;
+  }
+}
+
+/* ==================================== */
+/* 1. Definição da Animação: Subir e Aparecer */
+/* ==================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.akazaParagrafo {
+  animation-name: fadeInUp;
+
+  animation-duration: 1.2s;
+
+  animation-timing-function: ease-out;
+
+  animation-delay: 0.5s;
+
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+}

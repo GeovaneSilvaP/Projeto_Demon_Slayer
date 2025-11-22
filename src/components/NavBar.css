@@ -1,0 +1,48 @@
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  background: #1a1a1a4f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-left: 10px;
+}
+
+/* ==================================== */
+/* MELHORIA: NAV LINKS (Lista de Links) */
+/* ==================================== */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 75px;
+  margin-right: 120px;
+}
+
+/* ------------------------------------ */
+/* Estilo dos Links Individuais <a>   */
+/* ------------------------------------ */
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  padding: 5px 0;
+}
+
+.nav-links a:hover {
+  color: #ff4500;
+  text-shadow: 0 0 5px rgba(255, 69, 0, 0.7);
+}
